@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/54b1a1f787.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Inner City Auto Works</title>
+  <link rel="shortcut icon" type="image/svg" href="favicon.ico">
+</head>
+<body>
+
+  <div class="dimmer"></div>
+
+  <nav>
+    <a href="/#showcase" class="nav-link nav-logo" id="nav-home" tabindex="0">
+      <img src="/images/logo.svg" alt="Inner City Auto Works logo.">
+    </a>
+    <a class="hamburger-menu" href="javascript:void(0)" onclick="openNav()">
+      <img src="/images/graffiti-menu-min.svg" alt="">
+    </a>
+    <div class="nav-links">
+      <a href="/#story" class="nav-link nav-story" tabindex="0">
+        <img src="/images/story.svg" alt="Story: Go to the story section.">
+      </a>
+      <a href="/#services" class="nav-link nav-services" tabindex="0">
+        <img src="/images/services.svg" alt="Services: Go to the services section.">
+      </a>
+      <a href="/#quote" class="nav-link nav-quote" tabindex="0">
+        <img src="/images/quote.svg" alt="Quote: Go to the quote section.">
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========== SIDENAV =========== -->
+  <div class="side-nav">
+    <a href="javascript:void(0)" onclick="closeNav()" class="close-button" >
+      <img src="/images/close.svg" alt="close the side nav">
+    </a>
+    <a href="/#story" onclick="closeNav()" class="side-nav-link">
+      <img class="nav-link" src="/images/story.svg" alt="Story: Go to the story section.">
+    </a>
+    <a href="/#services" onclick="closeNav()" class="side-nav-link">
+      <img class="nav-link" src="/images/services.svg" alt="Services: Go to the services section.">
+    </a>
+    <a href="/#quote" onclick="closeNav()" class="side-nav-link">
+      <img class="nav-link" src="/images/quote.svg" alt="Quote: Go to the quote section.">
+    </a>
+    <div class="close-div" onclick="closeNav()"></div>
+  </div>
+
+  <header id="showcase">
+    <img class="logo" src="/images/logo.svg" alt="inner City Auto Works graffiti style logo">
+    <a class="scroll" href="#story"><img src="/images/down-arrows.svg" alt="down arrows"></a>
+  </header>
+
+  <!-- ========== STORY ========== -->
+  <section id="story-section">
+    <div id="story">&nbsp;</div>
+    <h1>Our Story</h1>
+    <img id="picture" src="images/james-heilinger.jpg" alt="Photo of James Heilinger">
+    <div id="text-story">
+      <p>As a web developer, I know how important it is to have an eye-catching, easy-to-use, conversion centered website that reflects your style and radiates your brand. Let me make one for you!</p>
+      <br>
+      <p>Do you know there is much more to a successful web presence than just having a good looking website? You need to get your site in front of the right people in order to make sales. From setting up advertising campaigns, managing social media, and improving SEO (Search Engine Optimization), it can be a lot to learn and manage on your own. I can help your business grow in all of these areas and more!</p>
+    </div>
+    <a class="cta btn" href="#quote"><img class="cta-btn-img" src="/images/free-quote.svg" alt="Free Quote: Go to the quote section."></a>
+    <a class="cta-hook btn-secondary" href="#services"><img class="cta-hook-img" src="/images/learn-more.svg" alt="Learn More: Go to the services section."></a>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services-section">
+    <div id="services">&nbsp;</div>
+    <img class="heading" src="/images/what-we-do.svg" alt="What We Do">
+
+    <div class="gallery">
+
+      <div class="card">
+        <h2 class="number">01</h2>
+        <i class="fas fa-bed icon"></i>
+        <h2 class="card-title">TURBO/SUPERCHARGER</h2>
+        <p class="card-snippet">An app to calculate how long until a certain event for my kids, in terms they can understand.</p>
+      </div>
+      
+      <div class="card teaser">
+        <h2 class="number">02</h2>
+        <i class="fas fa-cubes icon"></i>
+        <h2 class="card-title">More to come!</h2>
+        <p class="card-snippet">Check back soon for more awesome projects!</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== FREE QUOTE ========== -->
+  <section id="quote-section">
+    <div id="quote">&nbsp;</div>
+    <img class="heading" src="/images/free-quote-heading.svg" alt="Free Quote heading">
+    <form method="POST" name="quote-form" id="quote-form" action="/thank-you.html" netlify-honeypot="pulse-check" data-netlify="true" data-netlify-recaptcha="true">
+      <label class="hidden">Let's check if you have a pulse: <input name="pulse-check" /></label>
+
+      <label for="name">Name</label>
+      <input type="text" class="input-field" name="name" placeholder="First and/or last name..." required>
+
+      <label for="subject">Subject</label>
+      <input type="text" class="input-field" name="subject" placeholder="What's this about?" required>
+
+      <label for="email">Email</label>
+      <input type="email" class="input-field" name='email' placeholder="you@yourhost.com" required>
+
+      <label for="message">Message</label>
+      <textarea name="message" class="input-field" placeholder="Tell me about your project..." required></textarea>
+
+      <div data-netlify-recaptcha="true"></div>
+
+      <input type="submit" value="Send" id="submit-btn" class="btn">
+    </form>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <p id="copyright">&copy; 2021 - Inner City Auto Works</p>
+    <p>Site created by <a href="https://autoshopgrowth.com">AutoShopGrowth.com</a></p>
+  </footer>
+
+  <script src="/js/sideNav.js"></script>
+</body>
+</html>

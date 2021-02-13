@@ -1,0 +1,102 @@
+/** @format */
+
+.date-selector {
+  box-sizing: border-box;
+  background-color: $bg;
+  padding: 1rem;
+  font-family: $font-3;
+  border: 1px solid $text-light;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1.5rem;
+
+  display: grid;
+  gap: 1rem;
+  justify-self: center;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "date"
+    "disp"
+    "save";
+
+  label[for="date-picker"] {
+    grid-area: title;
+    font-family: $font-1;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  input[type="date"] {
+    grid-area: date;
+    font-family: $font-3;
+    justify-self: stretch;
+    padding: 0.5rem;
+  }
+}
+
+.sleeps-answer {
+  box-sizing: border-box;
+  grid-area: disp;
+  border: 1px solid $text-light;
+  cursor: pointer;
+  background-color: $color-1;
+  color: $text-light;
+  font-family: $font-2;
+  font-size: 2rem;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  outline-style: none;
+  padding: 0.5rem;
+  z-index: 0;
+}
+
+.sleeps-cover {
+  box-sizing: border-box;
+  grid-area: disp;
+  border: 1px solid $text-light;
+  height: 150px;
+  width: 100%;
+  cursor: pointer;
+  background-color: $color-2;
+  color: $text-dark;
+  font-family: $font-2;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  outline-style: none;
+  padding: 0.5rem;
+  z-index: 1;
+
+  transition: opacity 1s;
+
+  &:focus {
+    opacity: 0;
+  }
+}
+
+.save-section {
+  grid-area: save;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 0.5rem;
+  margin-top: 1.5rem;
+
+  input[type="text"] {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  input[type="checkbox"] {
+    margin: 0 0.5rem 0 0;
+    padding: 0;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+}

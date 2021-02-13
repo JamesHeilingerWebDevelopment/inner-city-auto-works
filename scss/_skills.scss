@@ -1,0 +1,93 @@
+/** @format */
+@import "vars";
+@import "defaults";
+
+#skills-section {
+  background-color: $bg-alt;
+  color: $text-light;
+  display: grid;
+  gap: 1rem;
+
+  grid-template-columns: auto;
+  grid-template-areas:
+    "anchor"
+    "title"
+    "container";
+
+  h1 {
+    grid-area: title;
+    @include h1-style;
+    text-align: center;
+  }
+
+  width: 100%;
+  height: 100%;
+  // padding: 1rem;
+
+  #skills {
+    grid-area: anchor;
+    position: relative;
+    font-size: 0;
+    top: -$nav-height;
+    margin: 0;
+    padding: 0;
+  }
+
+  .badges {
+    grid-area: container;
+    display: grid;
+    justify-self: center;
+    grid-auto-flow: dense;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    // align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 6rem;
+
+    @include bp(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .skill {
+    justify-self: center;
+    img {
+      height: 4rem;
+    }
+
+    // img[data-tooltip="Jamstack"] {
+    //   transform: scale(0.75);
+    // }
+
+    i {
+      font-size: 5rem;
+    }
+
+    .fa-js {
+      color: #f4e21e;
+    }
+  }
+
+  .wide {
+    img {
+      height: 3rem;
+    }
+
+    grid-column: span 2;
+
+    @include bp(medium) {
+      grid-column: span 2;
+    }
+  }
+
+  .fixed-2 {
+    img {
+      height: 3rem;
+    }
+
+    // grid-column: span 2;
+  }
+}

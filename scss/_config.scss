@@ -1,0 +1,43 @@
+/** @format */
+@import "vars";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // scrollbar-width: thin;
+  scrollbar-color: $bg-alt $bg;
+  scroll-behavior: smooth;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 1rem;
+}
+*::-webkit-scrollbar-track {
+  background: $bg;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $text-light-alt;
+  border-radius: 20px;
+  border: 3px solid $bg;
+}
+
+:focus {
+  border: 3px solid $color-3;
+}
+
+// Set text color based on background
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $text-dark;
+  } @else {
+    @return $text-light;
+  }
+}
+
+// Set background & text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}

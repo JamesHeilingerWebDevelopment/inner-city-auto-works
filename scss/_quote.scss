@@ -1,0 +1,102 @@
+/** @format */
+
+@import "vars";
+@import "defaults";
+
+#quote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  #quote {
+    grid-area: anchor;
+    position: relative;
+    font-size: 0;
+    top: -$nav-height;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-family: $font-1;
+    font-weight: 400;
+    color: $text-light;
+    font-size: 2rem;
+    margin: 1rem 0;
+
+    @include bp(small) {
+      font-size: 3rem;
+    }
+  }
+
+  #quote-form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-width: 650px;
+    min-width: 300px;
+    background-color: $bg-transparent;
+    border: 1px solid $text-light;
+    @include radius;
+    padding: 1rem 2rem 2rem 2rem;
+    margin-bottom: 2rem;
+
+    label {
+      font-family: $font-2;
+      color: $text-light;
+      font-size: 1rem;
+
+      @include bp(medium) {
+        font-size: 1.35rem;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .input-field {
+      background-color: $bg-alt;
+      color: $text-light;
+      font-family: $font-3;
+      font-size: 1rem;
+      padding: 0.75rem 1.25rem;
+      margin: 0.5rem 0;
+      border: 1px solid $text-light;
+      outline: none;
+
+      &:focus {
+        border: 1px solid $color-1;
+      }
+    }
+
+    textarea {
+      height: 150px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .g-recaptcha {
+      margin-top: 1rem;
+
+      transform: scale(0.76);
+      -webkit-transform: scale(0.76);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+
+      @include bp(small) {
+        transform: none;
+        -webkit-transform: none;
+      }
+    }
+
+    input[type="submit"] {
+      margin-top: 1rem;
+      font-size: 2rem;
+      color: $text-dark;
+      cursor: pointer;
+    }
+  }
+}

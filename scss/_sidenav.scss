@@ -1,0 +1,36 @@
+.side-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    width: 0;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 1rem;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, max-content);
+
+    background-color: $navbar-bg-transparent;
+
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+
+    .side-nav-link {
+        padding-left: 1.5rem;
+
+        img {
+            width: auto;
+            height: 3rem;
+        }
+    }
+
+    .close-button {
+        width: fit-content;
+        justify-self: end;
+        margin-right: 1rem;
+    }
+}

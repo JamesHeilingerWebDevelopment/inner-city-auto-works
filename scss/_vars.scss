@@ -1,0 +1,78 @@
+/** @format */
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+// Responsiveness media queries
+@mixin bp($point) {
+  @if $point == small {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == very-large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $point) {
+      @content;
+    }
+  }
+}
+
+// Text colors
+$text-light: #dddddd;
+$text-light-alt: #aaaaaa;
+$text-dark: #212121;
+$text-dark-alt: #333333;
+
+// Background colors
+$bg: hsla(155, 20%, 13%, 1);
+$bg-alt: #333333;
+$bg-transparent: hsla(154, 100%, 87%, 0.8);
+$bg-button: hsla(65, 100%, 87%, 0.8);
+$bg-button-alt: hsla(259, 100%, 87%, 0.8);
+$navbar-bg-transparent: hsla(155, 20%, 13%, 0.9);
+
+// Background image
+// $hero-image: "/images/crater_lake.JPG";
+
+// Color scheme
+$color-1: hsla(154, 100%, 50%, 1.0);
+$color-2: hsla(65, 100%, 50%, 1.0);
+$color-3: hsla(259, 100%, 55%, 1.0);
+$color-4: hsla(300, 100%, 50%, 1.0);
+$white: hsla(0, 0%, 100%, 1.0);
+$black: hsla(0, 0%, 0%, 1.0);
+$gray: lighten($black, 25%);
+
+$button-bg: transparentize($color-2, 0.4);
+$button-bg-border: transparentize($color-3, 0.3);
+$button-bg-alt: transparentize($color-3, 0.2);
+
+$button-bg-sec: transparentize($black, 0.5);
+$button-bg-sec-border: transparentize($gray, 0.5);
+
+
+// Shadows
+$shadow: -1px 1px 3px -1px $text-light;
+
+// Fonts
+$font-1: "News Cycle", sans-serif;
+$font-2: "Roboto Mono", monospace;
+$font-3: "Noto Sans", sans-serif;
+
+// Navbar height
+$nav-height: 80px;
+
+// Border radius
+$radius: 1rem;

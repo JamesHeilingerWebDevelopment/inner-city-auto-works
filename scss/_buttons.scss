@@ -1,0 +1,88 @@
+/** @format */
+
+.btn {
+  text-decoration: none;
+  font-family: $font-2;
+  font-size: 1.2rem;
+  padding: 2rem;
+  color: $text-light;
+  background-color: $button-bg;
+  // background-color: $bg-button;
+  @include radius;
+  text-align: center;
+  transition-duration: 0.4s;
+  display: grid;
+  align-content: center;
+  border: .5rem solid $button-bg-border;
+  z-index: 5;
+
+  @media (min-width: 375px) {
+    font-size: 1.5rem;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-2;
+    border-color: $color-3;
+    color: $text-dark;
+  }
+
+  &:disabled {
+    background-color: $bg-button-alt;
+    color: $text-light-alt;
+    border-color: $text-light-alt;
+  }
+}
+
+.btn-secondary {
+  text-decoration: none;
+  font-family: $font-2;
+  font-size: 1.2rem;
+  padding: 2rem;
+  color: $text-light;
+  background-color: $button-bg-sec;
+  border: 0.5rem solid $button-bg-sec-border;
+  // opacity: 0.5;
+  @include radius;
+  text-align: center;
+  transition-duration: 0.4s;
+  display: grid;
+  align-content: center;
+
+  @media (min-width: 375px) {
+    font-size: 1.5rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $black;
+    border-color: $gray;
+  }
+
+  &:disabled {
+    background-color: $bg;
+    color: $text-light-alt;
+    border-color: $text-light-alt;
+  }
+}
+
+// %btn {
+//   display: inline-block;
+//   border-radius: 5px;
+//   padding: 8px 20px;
+//   margin: 3px;
+
+//   &:hover {
+//     transform: scale(0.98);
+//   }
+// }
+
+// .btn-primary {
+//   @extend %btn;
+//   @include set-background(lighten($color-1, 10%));
+// }
+
+// .btn-secondary {
+//   @extend %btn;
+//   @include set-background($color-2);
+// }

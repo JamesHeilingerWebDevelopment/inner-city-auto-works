@@ -1,0 +1,89 @@
+/** @format */
+
+@import "vars";
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $nav-height + 1;
+  font-size: 1rem;
+  background-color: $navbar-bg-transparent;
+  padding: 0 1rem;
+
+  z-index: 1000;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  @include bp(medium) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "logo links";
+  }
+
+  .hamburger-menu {
+    display: grid;
+    width: auto;
+    height: 70%;
+    
+    img {
+      place-self: end;
+      height: 100%;
+      width: auto;
+      padding: 0.5rem;
+    }
+
+    @include bp(medium) {
+      display: none;
+    }
+  }
+
+  .nav-logo {
+    img {
+      height: 4rem;
+    }
+  }
+
+  .nav-links {
+    display: none;
+    
+    @include bp(medium) {
+      grid-area: links;
+      justify-self: end;
+      height: 100%;
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-areas: "link1 link2 link3";
+    }
+
+    .nav-link {
+      // place-self: center;
+      // width: fit-content;
+      // height: auto;
+      align-self: center;
+      justify-self: center;
+      // margin: 0;
+      // padding: 0;
+  
+      img {
+        height: 3rem;
+        width: auto;
+        align-self: center;
+      }
+  
+    }
+    .nav-story {
+      grid-area: link1;
+    }
+  
+    .nav-services {
+      grid-area: link2;
+    }
+  
+    .nav-quote {
+      grid-area: link3;
+    }
+  }
+}

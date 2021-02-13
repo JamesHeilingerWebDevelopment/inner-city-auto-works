@@ -1,0 +1,134 @@
+/** @format */
+
+@import "vars";
+@import "defaults";
+
+#story-section {
+  // background-color: $bg;
+  color: $text-light;
+  font-family: $font-3;
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  justify-items: center;
+  padding: 0 1rem 2rem 1rem;
+
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "anchor"
+    "title"
+    "pic"
+    "txt"
+    "cta";
+
+  @include bp(small) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "anchor anchor"
+      "title  title"
+      "pic    pic"
+      "txt    txt"
+      "cta    hook";
+  }
+
+  @include bp(medium) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 0.5rem;
+    grid-template-areas:
+      "anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor"
+      "title  title  title  title  title  title  title  title  title  title  title  title"
+      "pic    pic    pic    pic    pic    pic    txt    txt    txt    txt    txt    txt"
+      "blank  blank  blank  blank  cta    cta    cta    hook   hook   hook   hook   hook";
+  }
+
+  h1 {
+    grid-area: title;
+    @include h1-style;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  img {
+    grid-area: pic;
+    justify-self: center;
+
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+
+    @include bp(medium) {
+      justify-self: end;
+      max-width: 315px;
+    }
+  }
+
+  #story {
+    grid-area: anchor;
+    position: relative;
+    font-size: 0;
+    top: -$nav-height;
+    margin: 0;
+    padding: 0;
+  }
+
+  #text-story {
+    grid-area: txt;
+    align-self: center;
+    max-width: 300px;
+    font-size: 1rem;
+
+    @include bp(medium) {
+      justify-self: start;
+    }
+  }
+
+  p > {
+    span {
+      color: $color-2;
+      text-transform: uppercase;
+    }
+  }
+
+  // #call-to-action {
+  //   grid-area: act;
+  //   text-align: center;
+  //   font-weight: bold;
+  //   font-size: 1.5rem;
+  //   max-width: 300px;
+
+  //   @media (min-width: 375px) {
+  //     max-width: 320px;
+  //   }
+
+  //   @include bp(medium) {
+  //     max-width: 450px;
+  //   }
+  // }
+
+  .cta {
+    grid-area: cta;
+    justify-self: center;
+    
+  }
+
+  .cta-btn-img {
+    height: 10rem;
+    width: auto;
+  }
+
+  .cta-hook-img {
+    height: 7rem;
+    width: auto;
+  }
+
+  .cta-hook {
+    display: none;
+    grid-area: hook;
+    justify-self: start;
+    align-self: center;
+
+    @include bp(small) {
+      display: block;
+    }
+  }
+}

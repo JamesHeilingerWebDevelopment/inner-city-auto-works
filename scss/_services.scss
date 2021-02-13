@@ -1,0 +1,44 @@
+/** @format */
+
+@import "vars";
+@import "defaults";
+
+#services-section {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  grid-template-areas:
+    "anchor"
+    "title"
+    "gallery";
+
+  #services {
+    grid-area: anchor;
+    position: relative;
+    font-size: 0;
+    top: -71px;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    grid-area: title;
+    @include h1-style;
+  }
+
+  .gallery {
+    grid-area: gallery;
+    display: grid;
+    gap: 1rem;
+    justify-content: space-around;
+    grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+
+    @include bp(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+    // @include bp(large) {
+    //   grid-template-columns: repeat(3, 1fr);
+    // }
+  }
+}

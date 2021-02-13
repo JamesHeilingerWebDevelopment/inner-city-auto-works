@@ -1,0 +1,38 @@
+/** @format */
+@import "vars";
+@import "defaults";
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: $text-light;
+
+  font-family: $font-3;
+  font-size: 0.75rem;
+  padding: 1rem;
+
+  p {
+    font-size: 0.7rem;
+    margin: 0 0.5rem;
+
+    @media (min-width: 375px) {
+      font-size: 1rem;
+    }
+
+    @include bp(medium) {
+      font-size: 1.5rem;
+    }
+  }
+
+  a {
+    color: $text-light;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-2;
+    }
+  }
+}
