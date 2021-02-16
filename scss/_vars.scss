@@ -32,16 +32,19 @@
 // Text colors
 $text-light: #dddddd;
 $text-light-alt: #aaaaaa;
-$text-dark: #212121;
+$text-dark: #1C110A;
 $text-dark-alt: #333333;
 
 // Background colors
 $bg: hsla(155, 20%, 13%, 1);
 $bg-alt: #333333;
-$bg-transparent: hsla(154, 100%, 87%, 0.8);
+$bg-transparent: hsla(110, 100%, 65%, 0.8);
+// $bg-transparent: hsla(154, 100%, 87%, 0.8);
 $bg-button: hsla(65, 100%, 87%, 0.8);
 $bg-button-alt: hsla(259, 100%, 87%, 0.8);
-$navbar-bg-transparent: hsla(155, 20%, 13%, 0.9);
+$navbar-bg-transparent: #1C110A;
+// $input-bg: hsla(267, 100%, 54%, 0.8);
+$input-bg: hsla(276, 100%, 53%, 1);
 
 // Background image
 // $hero-image: "/images/crater_lake.JPG";
@@ -51,6 +54,15 @@ $color-1: hsla(154, 100%, 50%, 1.0);
 $color-2: hsla(65, 100%, 50%, 1.0);
 $color-3: hsla(259, 100%, 55%, 1.0);
 $color-4: hsla(300, 100%, 50%, 1.0);
+$color-5: #20A4F3;
+$carolina-blue: #39A0ED;
+$blue-green: #2F97C1;
+$vivid-sky-blue: #42CAFD;
+$verdigris: #00AFB9;
+$dark-slate-gray: #1C5253;
+$blue-jeans: #33A1FD;
+$torea-bay: #1322b3;
+
 $white: hsla(0, 0%, 100%, 1.0);
 $black: hsla(0, 0%, 0%, 1.0);
 $gray: lighten($black, 25%);
@@ -67,9 +79,9 @@ $button-bg-sec-border: transparentize($gray, 0.5);
 $shadow: -1px 1px 3px -1px $text-light;
 
 // Fonts
-$font-1: "News Cycle", sans-serif;
-$font-2: "Roboto Mono", monospace;
-$font-3: "Noto Sans", sans-serif;
+$font-1: "Nunito", sans-serif;
+$font-2: "Nunito", sans-serif;
+$font-3: "Nunito", sans-serif;
 
 // Navbar height
 $nav-height: 80px;

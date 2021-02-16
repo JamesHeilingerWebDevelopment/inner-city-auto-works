@@ -1,7 +1,5 @@
 /** @format */
-@import url("https://fonts.googleapis.com/css2?family=News+Cycle&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap");
 /** @format */
 /** @format */
 /** @format */
@@ -37,11 +35,11 @@
 /** @format */
 .btn {
   text-decoration: none;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
   padding: 2rem;
-  color: #dddddd;
-  background-color: rgba(234, 255, 0, 0.6);
+  color: white;
+  background-color: #1322b3;
   border-radius: 1rem;
   text-align: center;
   -webkit-transition-duration: 0.4s;
@@ -50,8 +48,9 @@
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  border: 0.5rem solid rgba(98, 26, 255, 0.7);
+  border: 0.5rem solid #eaff00;
   z-index: 5;
+  cursor: pointer;
 }
 
 @media (min-width: 375px) {
@@ -61,9 +60,7 @@
 }
 
 .btn:hover, .btn:active {
-  background-color: #eaff00;
-  border-color: #621aff;
-  color: #212121;
+  background-color: #621aff;
 }
 
 .btn:disabled {
@@ -74,12 +71,12 @@
 
 .btn-secondary {
   text-decoration: none;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
   padding: 2rem;
   color: #dddddd;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 0.5rem solid rgba(64, 64, 64, 0.5);
+  background-color: #1C110A;
+  border: 0.5rem solid #404040;
   border-radius: 1rem;
   text-align: center;
   -webkit-transition-duration: 0.4s;
@@ -88,6 +85,7 @@
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
+  cursor: pointer;
 }
 
 @media (min-width: 375px) {
@@ -97,8 +95,7 @@
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
-  background-color: black;
-  border-color: #404040;
+  border-color: #eaff00;
 }
 
 .btn-secondary:disabled {
@@ -132,7 +129,7 @@ body {
   width: 80%;
   max-width: 360px;
   height: auto;
-  margin-top: 6rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -151,7 +148,7 @@ nav {
   width: 100%;
   height: 81px;
   font-size: 1rem;
-  background-color: rgba(27, 40, 34, 0.9);
+  background-color: #1C110A;
   padding: 0 1rem;
   z-index: 1000;
   display: -ms-grid;
@@ -259,7 +256,7 @@ nav .nav-links .nav-quote {
   -ms-grid-rows: (max-content)[4];
       grid-template-rows: repeat(4, -webkit-max-content);
       grid-template-rows: repeat(4, max-content);
-  background-color: rgba(27, 40, 34, 0.9);
+  background-color: #1C110A;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -385,7 +382,7 @@ header .scroll img:hover {
 /** @format */
 #story-section {
   color: #dddddd;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
   display: -ms-grid;
   display: grid;
   row-gap: 1rem;
@@ -421,7 +418,7 @@ header .scroll img:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
-  font-family: "News Cycle", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 2rem;
   font-weight: 400;
   color: #dddddd;
@@ -486,6 +483,14 @@ header .scroll img:hover {
   }
 }
 
+#story-section #story-heading {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+  place-self: center;
+}
+
 #story-section p > span {
   color: #eaff00;
   text-transform: uppercase;
@@ -546,7 +551,7 @@ header .scroll img:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
-  font-family: "News Cycle", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 2rem;
   font-weight: 400;
   color: #dddddd;
@@ -665,7 +670,7 @@ header .scroll img:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
-  font-family: "News Cycle", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 2rem;
   font-weight: 400;
   color: #dddddd;
@@ -727,7 +732,7 @@ header .scroll img:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
-  font-family: "News Cycle", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 2rem;
   font-weight: 400;
   color: #dddddd;
@@ -765,7 +770,7 @@ header .scroll img:hover {
 
 /** @format */
 .card {
-  background-color: rgba(189, 255, 226, 0.8);
+  background-color: rgba(106, 255, 77, 0.8);
   margin: 0 1rem;
   max-width: 360px;
   cursor: pointer;
@@ -783,8 +788,8 @@ header .scroll img:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
-  font-family: "Roboto Mono", monospace;
-  color: #212121;
+  font-family: "Nunito", sans-serif;
+  color: #1C110A;
   font-weight: normal;
   font-size: 1.5rem;
   padding-bottom: 1rem;
@@ -795,8 +800,8 @@ header .scroll img:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: snip;
-  font-family: "Noto Sans", sans-serif;
-  color: #212121;
+  font-family: "Nunito", sans-serif;
+  color: #1C110A;
   padding-bottom: 1rem;
 }
 
@@ -805,8 +810,8 @@ header .scroll img:hover {
   -ms-grid-column: 1;
   grid-area: number;
   font-size: 3rem;
-  font-family: "News Cycle", sans-serif;
-  color: #212121;
+  font-family: "Nunito", sans-serif;
+  color: #1C110A;
 }
 
 .card .icon {
@@ -824,6 +829,7 @@ header .scroll img:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "Nunito", sans-serif;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -835,6 +841,10 @@ header .scroll img:hover {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
+}
+
+#quote-section p {
+  color: #333333;
 }
 
 #quote-section #quote {
@@ -849,17 +859,21 @@ header .scroll img:hover {
 }
 
 #quote-section h1 {
-  font-family: "News Cycle", sans-serif;
-  font-weight: 400;
-  color: #dddddd;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: #1C110A;
   font-size: 2rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0 0 0;
 }
 
 @media (min-width: 600px) {
   #quote-section h1 {
     font-size: 3rem;
   }
+}
+
+#quote-section .top-heading {
+  margin: 0;
 }
 
 #quote-section #quote-form {
@@ -873,17 +887,17 @@ header .scroll img:hover {
   width: 50vw;
   max-width: 650px;
   min-width: 300px;
-  background-color: rgba(189, 255, 226, 0.8);
-  border: 1px solid #dddddd;
+  background-color: rgba(106, 255, 77, 0.8);
   border-radius: 1rem;
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 1rem;
   margin-bottom: 2rem;
 }
 
 #quote-section #quote-form label {
-  font-family: "Roboto Mono", monospace;
-  color: #dddddd;
+  font-family: "Nunito", sans-serif;
+  color: #1C110A;
   font-size: 1rem;
+  margin-left: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -897,18 +911,19 @@ header .scroll img:hover {
 }
 
 #quote-section #quote-form .input-field {
-  background-color: #333333;
-  color: #dddddd;
-  font-family: "Noto Sans", sans-serif;
+  background-color: #1322b3;
+  color: white;
+  font-family: "Nunito", sans-serif;
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
   margin: 0.5rem 0;
-  border: 1px solid #dddddd;
+  border: none;
   outline: none;
+  border-radius: 1rem;
 }
 
 #quote-section #quote-form .input-field:focus {
-  border: 1px solid #00ff91;
+  background-color: #621aff;
 }
 
 #quote-section #quote-form textarea {
@@ -935,8 +950,30 @@ header .scroll img:hover {
 #quote-section #quote-form input[type="submit"] {
   margin-top: 1rem;
   font-size: 2rem;
-  color: #212121;
-  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: white;
+  opacity: 0.5;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: white;
+  opacity: 0.5;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: white;
+  opacity: 0.5;
 }
 
 /** @format */
@@ -957,7 +994,7 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #dddddd;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.75rem;
   padding: 1rem;
 }

@@ -5,16 +5,17 @@
   font-family: $font-2;
   font-size: 1.2rem;
   padding: 2rem;
-  color: $text-light;
-  background-color: $button-bg;
+  color: $white;
+  background-color: $torea-bay;
   // background-color: $bg-button;
   @include radius;
   text-align: center;
   transition-duration: 0.4s;
   display: grid;
   align-content: center;
-  border: .5rem solid $button-bg-border;
+  border: .5rem solid $color-2;
   z-index: 5;
+  cursor: pointer;
 
   @media (min-width: 375px) {
     font-size: 1.5rem;
@@ -22,9 +23,9 @@
 
   &:hover,
   &:active {
-    background-color: $color-2;
-    border-color: $color-3;
-    color: $text-dark;
+    background-color: $color-3;
+    // border-color: darken($color-2, 10%);
+    // color: $text-dark;
   }
 
   &:disabled {
@@ -40,14 +41,15 @@
   font-size: 1.2rem;
   padding: 2rem;
   color: $text-light;
-  background-color: $button-bg-sec;
-  border: 0.5rem solid $button-bg-sec-border;
+  background-color: $text-dark;
+  border: 0.5rem solid $gray;
   // opacity: 0.5;
   @include radius;
   text-align: center;
   transition-duration: 0.4s;
   display: grid;
   align-content: center;
+  cursor: pointer;
 
   @media (min-width: 375px) {
     font-size: 1.5rem;
@@ -55,8 +57,8 @@
 
   &:hover,
   &:focus {
-    background-color: $black;
-    border-color: $gray;
+    // background-color: $black;
+    border-color: $color-2;
   }
 
   &:disabled {

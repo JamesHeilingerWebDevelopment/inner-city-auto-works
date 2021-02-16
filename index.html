@@ -57,7 +57,8 @@
   <!-- ========== STORY ========== -->
   <section id="story-section">
     <div id="story">&nbsp;</div>
-    <h1>Our Story</h1>
+    <img class="heading" id="story-heading" src="/images/our-story.svg" alt="Our Story">
+
     <img id="picture" src="images/james-heilinger.jpg" alt="Photo of James Heilinger">
     <div id="text-story">
       <p>As a web developer, I know how important it is to have an eye-catching, easy-to-use, conversion centered website that reflects your style and radiates your brand. Let me make one for you!</p>
@@ -78,7 +79,7 @@
       <div class="card">
         <h2 class="number">01</h2>
         <i class="fas fa-bed icon"></i>
-        <h2 class="card-title">TURBO/SUPERCHARGER</h2>
+        <h2 class="card-title">TURBOCHARGER</h2>
         <p class="card-snippet">An app to calculate how long until a certain event for my kids, in terms they can understand.</p>
       </div>
       
@@ -99,17 +100,39 @@
     <form method="POST" name="quote-form" id="quote-form" action="/thank-you.html" netlify-honeypot="pulse-check" data-netlify="true" data-netlify-recaptcha="true">
       <label class="hidden">Let's check if you have a pulse: <input name="pulse-check" /></label>
 
-      <label for="name">Name</label>
-      <input type="text" class="input-field" name="name" placeholder="First and/or last name..." required>
+      <h1 class="top-heading">Contact Info</h1>
+      <p>Let us know who you are and where to send your custom quote.</p>
+      <br>
 
-      <label for="subject">Subject</label>
-      <input type="text" class="input-field" name="subject" placeholder="What's this about?" required>
+      <label for="name">Full Name</label>
+      <input type="text" class="input-field" name="name" placeholder="Full name..." required>
 
       <label for="email">Email</label>
       <input type="email" class="input-field" name='email' placeholder="you@yourhost.com" required>
 
-      <label for="message">Message</label>
-      <textarea name="message" class="input-field" placeholder="Tell me about your project..." required></textarea>
+      <h1>Vehicle Info</h1>
+      <p>Tell us about your ride. The more details you provide, the more accurate our quote will be.</p>
+      <br>
+
+      <label for="make">Make</label>
+      <input type="text" class="input-field" name="make" placeholder="Vehicle make...">
+
+      <label for="model">Model</label>
+      <input type="text" class="input-field" name="model" placeholder="Vehicle model...">
+
+      <label for="year">Year</label>
+      <input type="text" class="input-field" name="year" placeholder="Vehicle year...">
+
+      <h1>Modifications</h1>
+      <p>How do you want us to trick out your ride? Select all the options that you want below. If you want something that isn't listed, tell us in the Extras sections.</p>
+      <br>
+
+      <h1>Extras</h1>
+      <p>Let us know about any more info you may have that would help us give you a more accurate quote. If a service you want wasn't listed in the section above, tell us about it here.</p>
+      <br>
+
+      <label for="message">Message (optional)</label>
+      <textarea name="message" class="input-field" placeholder="Anything else we should know???"></textarea>
 
       <div data-netlify-recaptcha="true"></div>
 

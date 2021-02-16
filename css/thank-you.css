@@ -9,7 +9,7 @@ nav {
   width: 100%;
   height: 81px;
   font-size: 1rem;
-  background-color: rgba(27, 40, 34, 0.9);
+  background-color: #1C110A;
   padding: 0 1rem;
   z-index: 1000;
   display: -ms-grid;
@@ -103,11 +103,11 @@ nav .nav-links .nav-quote {
 /** @format */
 .btn {
   text-decoration: none;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
   padding: 2rem;
-  color: #dddddd;
-  background-color: rgba(234, 255, 0, 0.6);
+  color: white;
+  background-color: #1322b3;
   border-radius: 1rem;
   text-align: center;
   -webkit-transition-duration: 0.4s;
@@ -116,8 +116,9 @@ nav .nav-links .nav-quote {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  border: 0.5rem solid rgba(98, 26, 255, 0.7);
+  border: 0.5rem solid #eaff00;
   z-index: 5;
+  cursor: pointer;
 }
 
 @media (min-width: 375px) {
@@ -127,9 +128,7 @@ nav .nav-links .nav-quote {
 }
 
 .btn:hover, .btn:active {
-  background-color: #eaff00;
-  border-color: #621aff;
-  color: #212121;
+  background-color: #621aff;
 }
 
 .btn:disabled {
@@ -140,12 +139,12 @@ nav .nav-links .nav-quote {
 
 .btn-secondary {
   text-decoration: none;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
   padding: 2rem;
   color: #dddddd;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 0.5rem solid rgba(64, 64, 64, 0.5);
+  background-color: #1C110A;
+  border: 0.5rem solid #404040;
   border-radius: 1rem;
   text-align: center;
   -webkit-transition-duration: 0.4s;
@@ -154,6 +153,7 @@ nav .nav-links .nav-quote {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
+  cursor: pointer;
 }
 
 @media (min-width: 375px) {
@@ -163,8 +163,7 @@ nav .nav-links .nav-quote {
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
-  background-color: black;
-  border-color: #404040;
+  border-color: #eaff00;
 }
 
 .btn-secondary:disabled {
@@ -191,7 +190,7 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #dddddd;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.75rem;
   padding: 1rem;
 }
@@ -251,7 +250,7 @@ body {
 }
 
 .thank-you-page h1 {
-  font-family: "News Cycle", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 2rem;
   font-weight: 400;
   color: #dddddd;
@@ -268,7 +267,7 @@ body {
 }
 
 .thank-you-page p {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 1.25rem;
   text-align: center;
 }

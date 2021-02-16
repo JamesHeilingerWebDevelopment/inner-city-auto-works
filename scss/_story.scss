@@ -82,6 +82,11 @@
     }
   }
 
+  #story-heading {
+    grid-area: title;
+    place-self: center;
+  }
+
   p > {
     span {
       color: $color-2;
