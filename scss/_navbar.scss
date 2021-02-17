@@ -18,7 +18,7 @@ nav {
   align-items: center;
 
   @include bp(medium) {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-areas: "logo links";
   }
 
@@ -68,9 +68,13 @@ nav {
       // padding: 0;
   
       img {
-        height: 3rem;
+        height: 2rem;
         width: auto;
         align-self: center;
+
+        @include bp(large) {
+          height: 3rem;
+        }
       }
   
     }

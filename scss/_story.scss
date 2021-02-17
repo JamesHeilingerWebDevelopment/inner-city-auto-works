@@ -4,7 +4,6 @@
 @import "defaults";
 
 #story-section {
-  // background-color: $bg;
   color: $text-light;
   font-family: $font-3;
   display: grid;
@@ -38,7 +37,7 @@
       "anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor"
       "title  title  title  title  title  title  title  title  title  title  title  title"
       "pic    pic    pic    pic    pic    pic    txt    txt    txt    txt    txt    txt"
-      "blank  blank  blank  blank  cta    cta    cta    hook   hook   hook   hook   hook";
+      "blank  blank  blank  blank  cta    cta    cta    cta   hook   hook   hook   hook";
   }
 
   h1 {
@@ -94,26 +93,14 @@
     }
   }
 
-  // #call-to-action {
-  //   grid-area: act;
-  //   text-align: center;
-  //   font-weight: bold;
-  //   font-size: 1.5rem;
-  //   max-width: 300px;
-
-  //   @media (min-width: 375px) {
-  //     max-width: 320px;
-  //   }
-
-  //   @include bp(medium) {
-  //     max-width: 450px;
-  //   }
-  // }
-
   .cta {
     grid-area: cta;
     justify-self: center;
+    align-self: center;
     
+    @include bp(small) {
+      justify-self: end;
+    }
   }
 
   .cta-btn-img {

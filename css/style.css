@@ -95,6 +95,7 @@
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
+  background-color: #404040;
   border-color: #eaff00;
 }
 
@@ -162,8 +163,8 @@ nav {
 
 @media (min-width: 768px) {
   nav {
-    -ms-grid-columns: 1fr 2fr;
-        grid-template-columns: 1fr 2fr;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
         grid-template-areas: "logo links";
   }
 }
@@ -220,11 +221,17 @@ nav .nav-links .nav-link {
 }
 
 nav .nav-links .nav-link img {
-  height: 3rem;
+  height: 2rem;
   width: auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media (min-width: 992px) {
+  nav .nav-links .nav-link img {
+    height: 3rem;
+  }
 }
 
 nav .nav-links .nav-story {
@@ -409,12 +416,12 @@ header .scroll img:hover {
         grid-template-columns: repeat(12, minmax(0, 1fr));
     -webkit-column-gap: 0.5rem;
             column-gap: 0.5rem;
-        grid-template-areas: "anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor" "title  title  title  title  title  title  title  title  title  title  title  title" "pic    pic    pic    pic    pic    pic    txt    txt    txt    txt    txt    txt" "blank  blank  blank  blank  cta    cta    cta    hook   hook   hook   hook   hook";
+        grid-template-areas: "anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor" "title  title  title  title  title  title  title  title  title  title  title  title" "pic    pic    pic    pic    pic    pic    txt    txt    txt    txt    txt    txt" "blank  blank  blank  blank  cta    cta    cta    cta   hook   hook   hook   hook";
   }
 }
 
 #story-section h1 {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
@@ -484,7 +491,7 @@ header .scroll img:hover {
 }
 
 #story-section #story-heading {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
@@ -502,6 +509,16 @@ header .scroll img:hover {
   grid-area: cta;
   -ms-grid-column-align: center;
       justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (min-width: 600px) {
+  #story-section .cta {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
 }
 
 #story-section .cta-btn-img {
@@ -547,7 +564,7 @@ header .scroll img:hover {
 }
 
 #skills-section h1 {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
@@ -666,7 +683,7 @@ header .scroll img:hover {
 }
 
 #projects-section h1 {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
@@ -728,7 +745,7 @@ header .scroll img:hover {
 }
 
 #services-section h1 {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
@@ -754,37 +771,55 @@ header .scroll img:hover {
   display: -ms-grid;
   display: grid;
   gap: 1rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  padding-bottom: 2rem;
+  -ms-grid-columns: (minmax(288px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  padding: 0 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   #services-section .gallery {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
 }
 
+@media (min-width: 768px) {
+  #services-section .gallery {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 600px) {
+  #services-section .extra-card {
+    grid-column: span 2;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  #services-section .extra-card {
+    grid-column: span 1;
+  }
+}
+
 /** @format */
 .card {
   background-color: rgba(106, 255, 77, 0.8);
-  margin: 0 1rem;
   max-width: 360px;
-  cursor: pointer;
   padding: 1rem;
   border-radius: 1rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: "number icon" "title  title" "snip   snip";
+      grid-template-areas: "title  title" "snip   snip";
 }
 
 .card .card-title {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: title;
@@ -796,7 +831,7 @@ header .scroll img:hover {
 }
 
 .card .card-snippet {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: snip;
@@ -806,8 +841,6 @@ header .scroll img:hover {
 }
 
 .card .number {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: number;
   font-size: 3rem;
   font-family: "Nunito", sans-serif;
@@ -815,8 +848,6 @@ header .scroll img:hover {
 }
 
 .card .icon {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: icon;
   color: #621aff;
   font-size: 3rem;
@@ -826,25 +857,24 @@ header .scroll img:hover {
 /** @format */
 /** @format */
 #quote-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   font-family: "Nunito", sans-serif;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0;
+  justify-items: center;
+  padding: 0 1rem;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  #quote-section {
+    -ms-grid-columns: 1fr, 2fr;
+        grid-template-columns: 1fr, 2fr;
+  }
 }
 
 #quote-section p {
-  color: #333333;
+  color: rgba(26, 16, 9, 0.8);
 }
 
 #quote-section #quote {
@@ -866,12 +896,6 @@ header .scroll img:hover {
   margin: 1.5rem 0 0 0;
 }
 
-@media (min-width: 600px) {
-  #quote-section h1 {
-    font-size: 3rem;
-  }
-}
-
 #quote-section .top-heading {
   margin: 0;
 }
@@ -884,9 +908,7 @@ header .scroll img:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50vw;
   max-width: 650px;
-  min-width: 300px;
   background-color: rgba(106, 255, 77, 0.8);
   border-radius: 1rem;
   padding: 1rem;

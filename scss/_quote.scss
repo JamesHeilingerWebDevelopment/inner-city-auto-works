@@ -4,12 +4,16 @@
 @import "defaults";
 
 #quote-section {
-  display: flex;
+  display: grid;
   font-family: $font-1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+  // align-items: center;
+  justify-items: center;
+  padding: 0 1rem;
+  grid-template-columns: 1fr;
+
+  @include bp(small) {
+    grid-template-columns: 1fr, 2fr;
+  }
 
   p {
     color: $text-dark-alt;
@@ -31,9 +35,9 @@
     font-size: 2rem;
     margin: 1.5rem 0 0 0;
 
-    @include bp(small) {
-      font-size: 3rem;
-    }
+    // @include bp(small) {
+    //   font-size: 3rem;
+    // }
   }
 
   .top-heading {
@@ -43,9 +47,9 @@
   #quote-form {
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    // width: 50vw;
     max-width: 650px;
-    min-width: 300px;
+    // min-width: 300px;
     background-color: $bg-transparent;
     // border: 1px solid $text-light;
     @include radius;

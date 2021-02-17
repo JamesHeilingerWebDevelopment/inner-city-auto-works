@@ -2,15 +2,16 @@
 
 .card {
   background-color: $bg-transparent;
-  margin: 0 1rem;
+  // margin: 0 1rem;
+  // width: 100%;
   max-width: 360px;
-  cursor: pointer;
+  // cursor: pointer;
   padding: 1rem;
   @include radius;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
-    "number icon"
+    // "number icon"
     "title  title"
     "snip   snip";
 

@@ -23,8 +23,8 @@ nav {
 
 @media (min-width: 768px) {
   nav {
-    -ms-grid-columns: 1fr 2fr;
-        grid-template-columns: 1fr 2fr;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
         grid-template-areas: "logo links";
   }
 }
@@ -81,11 +81,17 @@ nav .nav-links .nav-link {
 }
 
 nav .nav-links .nav-link img {
-  height: 3rem;
+  height: 2rem;
   width: auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media (min-width: 992px) {
+  nav .nav-links .nav-link img {
+    height: 3rem;
+  }
 }
 
 nav .nav-links .nav-story {
@@ -163,6 +169,7 @@ nav .nav-links .nav-quote {
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
+  background-color: #404040;
   border-color: #eaff00;
 }
 
