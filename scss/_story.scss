@@ -97,6 +97,7 @@
     grid-area: cta;
     justify-self: center;
     align-self: center;
+    width: 80%;
     
     @include bp(small) {
       justify-self: end;
@@ -104,13 +105,13 @@
   }
 
   .cta-btn-img {
-    height: 10rem;
-    width: auto;
+    height: auto;
+    width: 100%;
   }
 
   .cta-hook-img {
-    height: 7rem;
-    width: auto;
+    height: auto;
+    width: 100%;
   }
 
   .cta-hook {

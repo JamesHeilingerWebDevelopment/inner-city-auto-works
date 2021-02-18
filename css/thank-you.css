@@ -14,19 +14,15 @@ nav {
   z-index: 1000;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: (max-content)[2];
+      grid-template-columns: repeat(2, -webkit-max-content);
+      grid-template-columns: repeat(2, max-content);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@media (min-width: 768px) {
-  nav {
-    -ms-grid-columns: 1fr 3fr;
-        grid-template-columns: 1fr 3fr;
-        grid-template-areas: "logo links";
-  }
 }
 
 nav .hamburger-menu {
@@ -37,7 +33,8 @@ nav .hamburger-menu {
 }
 
 nav .hamburger-menu img {
-  place-self: end;
+  -ms-grid-column-align: center;
+      justify-self: center;
   height: 100%;
   width: auto;
   padding: 0.5rem;
@@ -59,15 +56,15 @@ nav .nav-links {
 
 @media (min-width: 768px) {
   nav .nav-links {
-    grid-area: links;
     -ms-grid-column-align: end;
         justify-self: end;
     height: 100%;
     display: -ms-grid;
     display: grid;
-    gap: 1.5rem;
-    -ms-grid-columns: (minmax(0, 1fr))[3];
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+    -ms-grid-columns: (max-content)[3];
+        grid-template-columns: repeat(3, -webkit-max-content);
+        grid-template-columns: repeat(3, max-content);
         grid-template-areas: "link1 link2 link3";
   }
 }
@@ -78,20 +75,20 @@ nav .nav-links .nav-link {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+nav .nav-links .nav-link:hover, nav .nav-links .nav-link:active {
+  background-color: #621aff;
 }
 
 nav .nav-links .nav-link img {
-  height: 2rem;
+  height: 2.5rem;
   width: auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-@media (min-width: 992px) {
-  nav .nav-links .nav-link img {
-    height: 3rem;
-  }
 }
 
 nav .nav-links .nav-story {
@@ -111,7 +108,7 @@ nav .nav-links .nav-quote {
   text-decoration: none;
   font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
-  padding: 2rem;
+  padding: 1rem;
   color: white;
   background-color: #1322b3;
   border-radius: 1rem;
@@ -120,9 +117,10 @@ nav .nav-links .nav-quote {
           transition-duration: 0.4s;
   display: -ms-grid;
   display: grid;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  border: 0.5rem solid #eaff00;
+  -ms-grid-columns: max-content;
+      grid-template-columns: -webkit-max-content;
+      grid-template-columns: max-content;
+  border: 0.25rem solid #eaff00;
   z-index: 5;
   cursor: pointer;
 }
@@ -150,7 +148,7 @@ nav .nav-links .nav-quote {
   padding: 2rem;
   color: #dddddd;
   background-color: #1C110A;
-  border: 0.5rem solid #404040;
+  border: 0.25rem solid #404040;
   border-radius: 1rem;
   text-align: center;
   -webkit-transition-duration: 0.4s;

@@ -4,7 +4,7 @@
   text-decoration: none;
   font-family: $font-2;
   font-size: 1.2rem;
-  padding: 2rem;
+  padding: 1rem;
   color: $white;
   background-color: $torea-bay;
   // background-color: $bg-button;
@@ -12,8 +12,10 @@
   text-align: center;
   transition-duration: 0.4s;
   display: grid;
-  align-content: center;
-  border: .5rem solid $color-2;
+  grid-template-columns: max-content;
+  // justify-content: center;
+  // align-content: center;
+  border: 0.25rem solid $color-2;
   z-index: 5;
   cursor: pointer;
 
@@ -41,8 +43,9 @@
   font-size: 1.2rem;
   padding: 2rem;
   color: $text-light;
+  // background-color: hsl(30, 11.11%, 3.53%);
   background-color: $text-dark;
-  border: 0.5rem solid $gray;
+  border: 0.25rem solid $gray;
   // opacity: 0.5;
   @include radius;
   text-align: center;

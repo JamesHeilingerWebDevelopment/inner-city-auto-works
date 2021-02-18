@@ -65,8 +65,8 @@
       <br>
       <p>Do you know there is much more to a successful web presence than just having a good looking website? You need to get your site in front of the right people in order to make sales. From setting up advertising campaigns, managing social media, and improving SEO (Search Engine Optimization), it can be a lot to learn and manage on your own. I can help your business grow in all of these areas and more!</p>
     </div>
-    <a class="cta btn" href="#free-estimate"><img class="cta-btn-img" src="/images/free-quote.svg" alt="Free Quote: Go to the quote section."></a>
-    <a class="cta-hook btn-secondary" href="#what-we-do"><img class="cta-hook-img" src="/images/learn-more.svg" alt="Learn More: Go to the services section."></a>
+    <a class="cta btn" href="#free-estimate"><img class="cta-btn-img" src="/images/get-a-free-estimate.svg" alt="Get A Free Estimate: Go to the Free Estimate section."></a>
+    <a class="cta-hook btn-secondary" href="#what-we-do"><img class="cta-hook-img" src="/images/learn-more.svg" alt="Learn More: Go to the What We Do section."></a>
   </section>
 
   <!-- ========== SERVICES ========== -->
@@ -107,7 +107,7 @@
       <div class="card">
         <!-- <h2 class="number">05</h2>
         <i class="fas fa-cubes icon"></i> -->
-        <h2 class="card-title">EXHAUST REPLACEMENT</h2>
+        <h2 class="card-title">EXHAUST</h2>
         <p class="card-snippet">One of the most cost effective ways to modify your ride... get a small horsepower boost and that sound you love!</p>
       </div>
 
@@ -121,7 +121,7 @@
       <div class="card">
         <!-- <h2 class="number">07</h2>
         <i class="fas fa-cubes icon"></i> -->
-        <h2 class="card-title">SUSPENSION LOWERING</h2>
+        <h2 class="card-title">LOWERING</h2>
         <p class="card-snippet"></p>
       </div>
 
@@ -149,41 +149,73 @@
     <form method="POST" name="quote-form" id="quote-form" action="/thank-you.html" netlify-honeypot="pulse-check" data-netlify="true" data-netlify-recaptcha="true">
       <label class="hidden">Let's check if you have a pulse: <input name="pulse-check" /></label>
 
-      <h1 class="top-heading">Contact Info</h1>
-      <p>Let us know who you are and where to send your custom quote.</p>
-      <br>
+      <div>
+        <h1 class="top-heading">Contact Info</h1>
+        <p>Let us know who you are and where to send your custom estimate.</p>
+      </div>
 
-      <label for="name">Full Name</label>
-      <input type="text" class="input-field" name="name" placeholder="Full name..." required>
+      <div class="form-fields">
+        <label for="name">Full Name</label>
+        <input type="text" class="input-field" name="name" placeholder="Full name..." required>
+        <label for="email">Email</label>
+        <input type="email" class="input-field" name='email' placeholder="you@yourhost.com" required>
+      </div>
 
-      <label for="email">Email</label>
-      <input type="email" class="input-field" name='email' placeholder="you@yourhost.com" required>
+      <div>
+        <h1>Vehicle Info</h1>
+        <p>Tell us about your ride. The more details you provide, the more accurate our estimate will be.</p>
+      </div>
 
-      <h1>Vehicle Info</h1>
-      <p>Tell us about your ride. The more details you provide, the more accurate our quote will be.</p>
-      <br>
+      <div class="form-fields">
+        <label for="make">Make</label>
+        <input type="text" class="input-field" name="make" placeholder="Vehicle make...">
+        <label for="model">Model</label>
+        <input type="text" class="input-field" name="model" placeholder="Vehicle model...">
+        <label for="year">Year</label>
+        <input type="text" class="input-field" name="year" placeholder="Vehicle year...">
+      </div>
 
-      <label for="make">Make</label>
-      <input type="text" class="input-field" name="make" placeholder="Vehicle make...">
+      <div>
+        <h1>Modifications</h1>
+        <p>How do you want us to trick out your ride? Select all the options that you want below. If you want something that isn't listed, tell us in the Extras sections.</p>
+      </div>
+      <div class="mod-choices">
+        <input type="checkbox" name="turbo" id="turbo" value="turbo" tabindex="0" class="choice">
+        <label for="turbo" class="choice-label">turbo</label>
 
-      <label for="model">Model</label>
-      <input type="text" class="input-field" name="model" placeholder="Vehicle model...">
+        <input type="checkbox" name="nos" id="nos" value="nos" tabindex="0" class="choice">
+        <label for="nos" class="choice-label">nos</label>
 
-      <label for="year">Year</label>
-      <input type="text" class="input-field" name="year" placeholder="Vehicle year...">
+        <input type="checkbox" name="computer" id="computer" value="computer" tabindex="0" class="choice">
+        <label for="computer" class="choice-label">computer</label>
 
-      <h1>Modifications</h1>
-      <p>How do you want us to trick out your ride? Select all the options that you want below. If you want something that isn't listed, tell us in the Extras sections.</p>
-      <br>
+        <input type="checkbox" name="dyno" id="dyno" value="dyno" tabindex="0" class="choice">
+        <label for="dyno" class="choice-label">dyno</label>
 
-      <h1>Extras</h1>
-      <p>Let us know about any more info you may have that would help us give you a more accurate quote. If a service you want wasn't listed in the section above, tell us about it here.</p>
-      <br>
+        <input type="checkbox" name="exhaust" id="exhaust" value="exhaust" tabindex="0" class="choice">
+        <label for="exhaust" class="choice-label">exhaust</label>
 
-      <label for="message">Message (optional)</label>
-      <textarea name="message" class="input-field" placeholder="Anything else we should know???"></textarea>
+        <input type="checkbox" name="styling" id="styling" value="styling" tabindex="0" class="choice">
+        <label for="styling" class="choice-label">styling</label>
 
-      <div data-netlify-recaptcha="true"></div>
+        <input type="checkbox" name="lowering" id="lowering" value="lowering" tabindex="0" class="choice">
+        <label for="lowering" class="choice-label">lowering</label>
+
+        <input type="checkbox" name="stereo" id="stereo" value="stereo" tabindex="0" class="choice">
+        <label for="stereo" class="choice-label">stereo</label>
+      </div>
+
+      <div>
+        <h1>Additonal Info</h1>
+        <p>Let us know about any more info you may have that would help us give you a more accurate estimate. If a service you want wasn't listed in the section above, tell us about it here.</p>
+      </div>
+
+      <div class="form-fields">
+        <label for="message">Message (optional)</label>
+        <textarea name="message" class="input-field" placeholder="Anything else we should know???"></textarea>
+      </div>
+
+      <div data-netlify-recaptcha="true">RECAPTCHA</div>
 
       <input type="submit" value="Send" id="submit-btn" class="btn">
     </form>
