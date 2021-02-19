@@ -55,14 +55,7 @@ $color-1: hsla(154, 100%, 50%, 1.0);
 $color-2: hsla(65, 100%, 50%, 1.0);
 $color-3: hsla(259, 100%, 55%, 1.0);
 $color-4: hsla(300, 100%, 50%, 1.0);
-$color-5: #20A4F3;
-$carolina-blue: #39A0ED;
-$blue-green: #2F97C1;
-$vivid-sky-blue: #42CAFD;
-$verdigris: #00AFB9;
-$dark-slate-gray: #1C5253;
-$blue-jeans: #33A1FD;
-$torea-bay: #1322b3;
+$color-5: hsla(234, 81%, 39%, 1.0);
 
 $white: hsla(0, 0%, 100%, 1.0);
 $black: hsla(0, 0%, 0%, 1.0);
@@ -74,7 +67,6 @@ $button-bg-alt: transparentize($color-3, 0.2);
 
 $button-bg-sec: transparentize($black, 0.5);
 $button-bg-sec-border: transparentize($gray, 0.5);
-
 
 // Shadows
 $shadow: -1px 1px 3px -1px $text-light;

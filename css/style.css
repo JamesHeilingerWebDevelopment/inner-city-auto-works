@@ -36,28 +36,17 @@
 .btn {
   text-decoration: none;
   font-family: "Nunito", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   padding: 1rem;
   color: white;
-  background-color: #1322b3;
+  background-color: #1323b4;
   border-radius: 1rem;
   text-align: center;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: max-content;
-      grid-template-columns: -webkit-max-content;
-      grid-template-columns: max-content;
   border: 0.25rem solid #eaff00;
   z-index: 5;
   cursor: pointer;
-}
-
-@media (min-width: 375px) {
-  .btn {
-    font-size: 1.5rem;
-  }
 }
 
 .btn:hover, .btn:active {
@@ -74,7 +63,7 @@
   text-decoration: none;
   font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
-  padding: 2rem;
+  padding: 1rem;
   color: #dddddd;
   background-color: #1C110A;
   border: 0.25rem solid #404040;
@@ -87,6 +76,8 @@
   -ms-flex-line-pack: center;
       align-content: center;
   cursor: pointer;
+  width: 60%;
+  height: auto;
 }
 
 @media (min-width: 375px) {
@@ -332,6 +323,7 @@ header .scroll {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+  margin-bottom: 3rem;
 }
 
 header .scroll img {
@@ -393,35 +385,29 @@ header .scroll img:hover {
   row-gap: 1rem;
   -webkit-column-gap: 1rem;
           column-gap: 1rem;
-  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0 1rem 2rem 1rem;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: max-content;
+      grid-template-columns: -webkit-max-content;
+      grid-template-columns: max-content;
       grid-template-areas: "anchor" "title" "pic" "txt" "cta";
 }
 
 @media (min-width: 600px) {
   #story-section {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "anchor anchor" "title  title" "pic    pic" "txt    txt" "cta    hook";
-  }
-}
-
-@media (min-width: 768px) {
-  #story-section {
-    -ms-grid-columns: (minmax(0, 1fr))[12];
-        grid-template-columns: repeat(12, minmax(0, 1fr));
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 0.5rem;
             column-gap: 0.5rem;
-        grid-template-areas: "anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor anchor" "title  title  title  title  title  title  title  title  title  title  title  title" "pic    pic    pic    pic    pic    pic    txt    txt    txt    txt    txt    txt" "blank  blank  blank  blank  cta    cta    cta    cta   hook   hook   hook   hook";
+        grid-template-areas: "anchor anchor" "title  title" "pic    txt  " "cta    cta";
   }
 }
 
 #story-section h1 {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: title;
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
@@ -478,7 +464,7 @@ header .scroll img:hover {
       -ms-grid-row-align: center;
       align-self: center;
   max-width: 300px;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 @media (min-width: 768px) {
@@ -489,9 +475,8 @@ header .scroll img:hover {
 }
 
 #story-section #story-heading {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: title;
   place-self: center;
 }
@@ -505,19 +490,11 @@ header .scroll img:hover {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: cta;
+  place-self: center;
+  width: 100%;
+  max-width: 300px;
   -ms-grid-column-align: center;
       justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  width: 80%;
-}
-
-@media (min-width: 600px) {
-  #story-section .cta {
-    -ms-grid-column-align: end;
-        justify-self: end;
-  }
 }
 
 #story-section .cta-btn-img {
@@ -540,12 +517,6 @@ header .scroll img:hover {
       align-self: center;
 }
 
-@media (min-width: 600px) {
-  #story-section .cta-hook {
-    display: block;
-  }
-}
-
 /** @format */
 /** @format */
 /** @format */
@@ -563,9 +534,8 @@ header .scroll img:hover {
 }
 
 #skills-section h1 {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: title;
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
@@ -682,9 +652,8 @@ header .scroll img:hover {
 }
 
 #projects-section h1 {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: title;
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
@@ -744,9 +713,8 @@ header .scroll img:hover {
 }
 
 #services-section h1 {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: title;
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
@@ -770,58 +738,24 @@ header .scroll img:hover {
   display: -ms-grid;
   display: grid;
   gap: 1rem;
-  -ms-grid-columns: (minmax(288px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   padding: 0 1rem;
-}
-
-@media (min-width: 600px) {
-  #services-section .gallery {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  #services-section .gallery {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 600px) {
-  #services-section .extra-card {
-    grid-column: span 2;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  #services-section .extra-card {
-    grid-column: span 1;
-  }
 }
 
 /** @format */
 .card {
   background-color: rgba(106, 255, 77, 0.8);
-  max-width: 360px;
+  width: 100%;
   padding: 1rem;
   border-radius: 1rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: "title  title" "snip   snip";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 .card .card-title {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: title;
   font-family: "Nunito", sans-serif;
   color: #1C110A;
   font-weight: normal;
@@ -830,10 +764,6 @@ header .scroll img:hover {
 }
 
 .card .card-snippet {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: snip;
   font-family: "Nunito", sans-serif;
   color: #1C110A;
   padding-bottom: 1rem;
@@ -850,6 +780,66 @@ header .scroll img:hover {
   grid-area: icon;
   color: #621aff;
   font-size: 3rem;
+}
+
+.info-page {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #dddddd;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(0, 600px);
+      grid-template-columns: minmax(0, 600px);
+  -ms-grid-rows: (min-content)[3];
+      grid-template-rows: repeat(3, -webkit-min-content);
+      grid-template-rows: repeat(3, min-content);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  height: 100vh;
+  width: auto;
+  padding: 5rem 2rem;
+}
+
+.info-page img {
+  width: 100%;
+  height: auto;
+}
+
+.info-page .error-404 {
+  max-width: 450px;
+  padding: 0 3rem;
+}
+
+.info-page p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.info-page a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  width: 40%;
+  min-width: 180px;
+}
+
+.info-page a img {
+  width: 100%;
+  height: auto;
+  place-self: center;
+}
+
+.alt-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /** @format */
@@ -877,9 +867,6 @@ header .scroll img:hover {
 }
 
 #quote-section #quote {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: anchor;
   position: relative;
   font-size: 0;
   top: -80px;
@@ -912,7 +899,7 @@ header .scroll img:hover {
   gap: 0.5rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   #quote-section #quote-form {
     -ms-grid-columns: 1fr 2fr;
         grid-template-columns: 1fr 2fr;
@@ -939,7 +926,7 @@ header .scroll img:hover {
 }
 
 #quote-section #quote-form .input-field {
-  background-color: #1322b3;
+  background-color: #1323b4;
   color: white;
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
@@ -958,8 +945,12 @@ header .scroll img:hover {
   font-size: 1rem;
 }
 
+#quote-section #quote-form .recaptcha-container {
+  grid-column: 1 / -1;
+  place-self: center;
+}
+
 #quote-section #quote-form .g-recaptcha {
-  margin-top: 1rem;
   transform: scale(0.76);
   -webkit-transform: scale(0.76);
   transform-origin: 0 0;
@@ -974,8 +965,17 @@ header .scroll img:hover {
 }
 
 #quote-section #quote-form input[type="submit"] {
-  margin-top: 1rem;
-  font-size: 2rem;
+  grid-column: 1 / -1;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  place-self: center;
+}
+
+#quote-section #quote-form input[type="image"] {
+  width: 100%;
+  height: auto;
 }
 
 #quote-section #quote-form .mod-choices {
@@ -985,6 +985,7 @@ header .scroll img:hover {
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1rem;
   margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 #quote-section #quote-form .mod-choices input {
@@ -1012,7 +1013,7 @@ header .scroll img:hover {
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
-  background-color: #1322b3;
+  background-color: #1323b4;
   border-radius: 1rem;
   border: 0.25rem solid #eaff00;
   text-align: center;
@@ -1107,7 +1108,6 @@ footer p {
 
 footer a {
   color: #dddddd;
-  text-decoration: none;
 }
 
 footer a:hover {

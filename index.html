@@ -3,15 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/54b1a1f787.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- ========== FAVICON ========== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1323b4">
+  <meta name="apple-mobile-web-app-title" content="Inner City Auto Works">
+  <meta name="application-name" content="Inner City Auto Works">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="theme-color" content="#1323b4">
+
   <title>Inner City Auto Works</title>
-  <link rel="shortcut icon" type="image/svg" href="favicon.ico">
 </head>
 <body>
 
   <div class="dimmer"></div>
 
+  <!-- ========== NAVBAR ========== -->
   <nav>
     <a href="/#showcase" class="nav-link nav-logo" id="nav-home" tabindex="0">
       <img src="/images/logo.svg" alt="Inner City Auto Works logo.">
@@ -49,6 +62,7 @@
     <div class="close-div" onclick="closeNav()"></div>
   </div>
 
+  <!-- ========== SHOWCASE =========== -->
   <header id="showcase">
     <img class="logo" src="/images/logo.svg" alt="inner City Auto Works graffiti style logo">
     <a class="scroll" href="#our-story"><img src="/images/down-arrows.svg" alt="down arrows"></a>
@@ -77,67 +91,44 @@
     <div class="gallery">
 
       <div class="card">
-        <!-- <h2 class="number">01</h2>
-        <i class="fas fa-bed icon"></i> -->
         <h2 class="card-title">TURBOCHARGER</h2>
         <p class="card-snippet">Get a horsepower boost by letting us install a turbocharger on your ride.</p>
       </div>
       
       <div class="card">
-        <!-- <h2 class="number">02</h2>
-        <i class="fas fa-cubes icon"></i> -->
         <h2 class="card-title">NOS INSTALL</h2>
         <p class="card-snippet">We are licensed and certified to install NOS systems. Your friends will be super impressed by this one!</p>
       </div>
 
       <div class="card">
-        <!-- <h2 class="number">04</h2>
-        <i class="fas fa-cubes icon"></i> -->
         <h2 class="card-title">COMPUTER UPGRADES</h2>
         <p class="card-snippet">Another economical way to improve engine performance is to upgrade the computer on your car.</p>
       </div>
 
       <div class="card">
-        <!-- <h2 class="number">06</h2>
-        <i class="fas fa-cubes icon"></i> -->
         <h2 class="card-title">DYNO TUNING</h2>
         <p class="card-snippet">That's right, we recently got a dyno installed AND we hired an expert with over 15 years of experience to run it!</p>
       </div>
       
       <div class="card">
-        <!-- <h2 class="number">05</h2>
-        <i class="fas fa-cubes icon"></i> -->
         <h2 class="card-title">EXHAUST</h2>
         <p class="card-snippet">One of the most cost effective ways to modify your ride... get a small horsepower boost and that sound you love!</p>
       </div>
 
       <div class="card">
-        <!-- <h2 class="number">03</h2>
-        <i class="fas fa-cubes icon"></i> -->
         <h2 class="card-title">STYLING</h2>
         <p class="card-snippet">Really make your ride stand out from the crowd by getting custom ground effects and/or a spoiler installed. We also do custom body work and paint.</p>
       </div>
 
       <div class="card">
-        <!-- <h2 class="number">07</h2>
-        <i class="fas fa-cubes icon"></i> -->
         <h2 class="card-title">LOWERING</h2>
         <p class="card-snippet"></p>
       </div>
 
       <div class="card">
-        <!-- <h2 class="number">08</h2>
-        <i class="fas fa-cubes icon"></i> -->
         <h2 class="card-title">STEREO SYSTEM</h2>
         <p class="card-snippet"></p>
       </div>
-
-      <!-- <div class="card extra-card">
-        <h2 class="number">09</h2>
-        <i class="fas fa-cubes icon"></i>
-        <h2 class="card-title">AND MUCH MORE!</h2>
-        <p class="card-snippet"></p>
-      </div> -->
 
     </div>
   </section>
@@ -147,7 +138,8 @@
     <div id="free-estimate">&nbsp;</div>
     <img class="heading" src="/images/free-estimate.svg" alt="Free Estimate!">
     <form method="POST" name="quote-form" id="quote-form" action="/thank-you.html" netlify-honeypot="pulse-check" data-netlify="true" data-netlify-recaptcha="true">
-      <label class="hidden">Let's check if you have a pulse: <input name="pulse-check" /></label>
+      <label for="pulse-check" class="hidden">Let's check if you have a pulse: </label>
+      <input type="text" id="pulse-check" name="pulse-check" class="hidden" />
 
       <div>
         <h1 class="top-heading">Contact Info</h1>
@@ -176,8 +168,8 @@
       </div>
 
       <div>
-        <h1>Modifications</h1>
-        <p>How do you want us to trick out your ride? Select all the options that you want below. If you want something that isn't listed, tell us in the Extras sections.</p>
+        <h1>Mod Info</h1>
+        <p>How do you want us to trick out your ride? Select all the options that you want below. If you want something that isn't listed, tell us in the Extra Info section.</p>
       </div>
       <div class="mod-choices">
         <input type="checkbox" name="turbo" id="turbo" value="turbo" tabindex="0" class="choice">
@@ -206,7 +198,7 @@
       </div>
 
       <div>
-        <h1>Additonal Info</h1>
+        <h1>Extra Info</h1>
         <p>Let us know about any more info you may have that would help us give you a more accurate estimate. If a service you want wasn't listed in the section above, tell us about it here.</p>
       </div>
 
@@ -215,9 +207,9 @@
         <textarea name="message" class="input-field" placeholder="Anything else we should know???"></textarea>
       </div>
 
-      <div data-netlify-recaptcha="true">RECAPTCHA</div>
+      <div class="recaptcha-container" data-netlify-recaptcha="true"></div>
 
-      <input type="submit" value="Send" id="submit-btn" class="btn">
+      <input type="submit" value="Submit Request" id="submit-btn" class="btn send-btn">
     </form>
   </section>
 

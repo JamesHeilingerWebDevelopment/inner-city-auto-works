@@ -16,7 +16,6 @@ body {
     z-index: -5;
     opacity: 0.75;
     filter: blur(2px);
-    // filter: brightness(0.5);
 }
 
 .heading {
@@ -26,7 +25,7 @@ body {
     margin-top: 3rem;
     margin-bottom: 1rem;
 
-    @include bp (small) {
+    @include bp(small) {
         height: 8rem;
         width: auto;
     }

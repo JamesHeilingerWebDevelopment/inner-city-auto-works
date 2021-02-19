@@ -3,31 +3,24 @@
 .btn {
   text-decoration: none;
   font-family: $font-2;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   padding: 1rem;
   color: $white;
-  background-color: $torea-bay;
-  // background-color: $bg-button;
+  background-color: $color-5;
   @include radius;
   text-align: center;
   transition-duration: 0.4s;
-  display: grid;
-  grid-template-columns: max-content;
-  // justify-content: center;
-  // align-content: center;
   border: 0.25rem solid $color-2;
   z-index: 5;
   cursor: pointer;
 
   @media (min-width: 375px) {
-    font-size: 1.5rem;
+    // font-size: 1rem;
   }
 
   &:hover,
   &:active {
     background-color: $color-3;
-    // border-color: darken($color-2, 10%);
-    // color: $text-dark;
   }
 
   &:disabled {
@@ -41,18 +34,18 @@
   text-decoration: none;
   font-family: $font-2;
   font-size: 1.2rem;
-  padding: 2rem;
+  padding: 1rem;
   color: $text-light;
-  // background-color: hsl(30, 11.11%, 3.53%);
   background-color: $text-dark;
   border: 0.25rem solid $gray;
-  // opacity: 0.5;
   @include radius;
   text-align: center;
   transition-duration: 0.4s;
   display: grid;
   align-content: center;
   cursor: pointer;
+  width: 60%;
+  height: auto;
 
   @media (min-width: 375px) {
     font-size: 1.5rem;
@@ -70,24 +63,3 @@
     border-color: $text-light-alt;
   }
 }
-
-// %btn {
-//   display: inline-block;
-//   border-radius: 5px;
-//   padding: 8px 20px;
-//   margin: 3px;
-
-//   &:hover {
-//     transform: scale(0.98);
-//   }
-// }
-
-// .btn-primary {
-//   @extend %btn;
-//   @include set-background(lighten($color-1, 10%));
-// }
-
-// .btn-secondary {
-//   @extend %btn;
-//   @include set-background($color-2);
-// }

@@ -1,0 +1,49 @@
+.info-page {
+  box-sizing: border-box;
+  color: $text-light;
+  display: grid;
+  grid-template-columns: minmax(0, 600px);
+  grid-template-rows: repeat(3, min-content);
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  height: 100vh;
+  width: auto;
+  padding: 5rem 2rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .error-404 {
+    max-width: 450px;
+    padding: 0 3rem;
+  }
+
+  p {
+    font-family: $font-3;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  a {
+    display: grid;
+    grid-template-columns: auto;
+    width: 40%;
+    min-width: 180px;
+
+    img {
+      width: 100%;
+      height: auto;
+      place-self: center;
+    }
+  }
+}
+
+.alt-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

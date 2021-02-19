@@ -30,29 +30,7 @@
     grid-area: gallery;
     display: grid;
     gap: 1rem;
-    // justify-content: space-around;
-    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
-    // grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     padding: 0 1rem;
-
-    @include bp(small) {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @include bp(medium) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-
-  .extra-card {
-    @include bp(small) {
-      grid-column: span 2;
-      justify-self: center;
-      width: 100%;
-    }
-
-    @include bp(medium) {
-      grid-column: span 1;
-    }
   }
 }
