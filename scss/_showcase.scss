@@ -2,8 +2,15 @@
 @import "vars";
 @import "defaults";
 
-header {
+.no-webp header {
   background: $bg-alt url("/images/fragment-of-graffiti-drawings-YG42S26.jpg") no-repeat center center / cover;
+}
+
+.webp header {
+  background: $bg-alt url("/images/fragment-of-graffiti-drawings-YG42S26.webp") no-repeat center center / cover;
+}
+
+header {
   z-index: 1;
   color: $text-light;
   display: grid;
@@ -13,7 +20,6 @@ header {
   align-items: center;
   height: 100vh;
   width: auto;
-  // padding: 0 3rem;
   gap: 2rem;
   line-height: 1.3;
 

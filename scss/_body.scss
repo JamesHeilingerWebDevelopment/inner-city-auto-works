@@ -1,5 +1,14 @@
-body {
-    background: $bg-alt url("/images/metal-fence-2QH6ERY.jpg") no-repeat center center / cover;
+.no-webp .body-background {
+    background: $bg-alt url("/images/metal-fence-2QH6ERY.jpeg") no-repeat center center / cover;
+    background-attachment: fixed;
+    background-color: $bg;
+    height: 100vh;
+    width: auto;
+    z-index: -10;
+}
+
+.webp .body-background {
+    background: $bg-alt url("/images/metal-fence-2QH6ERY.webp") no-repeat center center / cover;
     background-attachment: fixed;
     background-color: $bg;
     height: 100vh;
@@ -15,7 +24,6 @@ body {
     width: 100vw;
     z-index: -5;
     opacity: 0.75;
-    filter: blur(2px);
 }
 
 .heading {

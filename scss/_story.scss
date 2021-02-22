@@ -7,77 +7,41 @@
   color: $text-light;
   font-family: $font-3;
   display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
-  // grid-template-columns: max-content;
+  grid-template-columns: fit-content;
   row-gap: 1rem;
   column-gap: 1rem;
   justify-content: center;
   padding: 0 1rem 2rem 1rem;
 
-  grid-template-columns: max-content;
-  grid-template-areas:
-    "anchor"
-    "title"
-    "pic"
-    "txt"
-    "cta";
-
-  // @include bp(small) {
-  //   grid-template-columns: repeat(2, max-content);
-  //   grid-template-areas:
-  //     "anchor anchor"
-  //     "title  title"
-  //     "pic    pic"
-  //     "txt    txt"
-  //     "cta    hook";
-  // }
-
   @include bp(small) {
     grid-template-columns: repeat(2, 1fr);
-    // grid-template-columns: repeat(2, minmax(300px, 1fr));
-    column-gap: 0.5rem;
-    grid-template-areas:
-      "anchor anchor"
-      "title  title"
-      "pic    txt  "
-      "cta    cta";
+    column-gap: 2rem;
   }
 
-  h1 {
-    grid-area: title;
-    @include h1-style;
-    text-align: center;
-    margin-top: 0;
-  }
+  picture {
 
-  img {
-    grid-area: pic;
     justify-self: center;
+    align-self: center;
 
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    .story-pic {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
 
-    @include bp(medium) {
-      justify-self: end;
-      max-width: 315px;
+      @include bp(medium) {
+        justify-self: end;
+        max-width: 315px;
+      }
     }
   }
 
-  #story {
-    grid-area: anchor;
-    position: relative;
-    font-size: 0;
-    top: -$nav-height;
-    margin: 0;
-    padding: 0;
-  }
-
   #text-story {
-    grid-area: txt;
-    align-self: center;
-    max-width: 300px;
+    place-self: center;
+    // width: 300px;
+    padding: 1rem;
+    max-width: 425px;
     font-size: 1.25rem;
+    line-height: 1.5;
 
     @include bp(medium) {
       justify-self: start;
@@ -85,19 +49,12 @@
   }
 
   #story-heading {
-    grid-area: title;
+    grid-column: 1 / -1;
     place-self: center;
   }
 
-  p > {
-    span {
-      color: $color-2;
-      text-transform: uppercase;
-    }
-  }
-
   .cta {
-    grid-area: cta;
+    grid-column: 1 / -1;
     place-self: center;
     width: 100%;
     max-width: 300px;
@@ -107,21 +64,5 @@
   .cta-btn-img {
     height: auto;
     width: 100%;
-  }
-
-  .cta-hook-img {
-    height: auto;
-    width: 100%;
-  }
-
-  .cta-hook {
-    display: none;
-    grid-area: hook;
-    justify-self: start;
-    align-self: center;
-
-    @include bp(small) {
-      // display: block;
-    }
   }
 }

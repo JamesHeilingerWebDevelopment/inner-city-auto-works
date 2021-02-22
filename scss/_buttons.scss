@@ -14,52 +14,52 @@
   z-index: 5;
   cursor: pointer;
 
-  @media (min-width: 375px) {
+  // @media (min-width: 375px) {
     // font-size: 1rem;
-  }
+  // }
 
   &:hover,
   &:active {
     background-color: $color-3;
   }
 
-  &:disabled {
-    background-color: $bg-button-alt;
-    color: $text-light-alt;
-    border-color: $text-light-alt;
-  }
+  // &:disabled {
+  //   background-color: $bg-button-alt;
+  //   color: $text-light-alt;
+  //   border-color: $text-light-alt;
+  // }
 }
 
-.btn-secondary {
-  text-decoration: none;
-  font-family: $font-2;
-  font-size: 1.2rem;
-  padding: 1rem;
-  color: $text-light;
-  background-color: $text-dark;
-  border: 0.25rem solid $gray;
-  @include radius;
-  text-align: center;
-  transition-duration: 0.4s;
-  display: grid;
-  align-content: center;
-  cursor: pointer;
-  width: 60%;
-  height: auto;
+// .btn-secondary {
+//   text-decoration: none;
+//   font-family: $font-2;
+//   font-size: 1.2rem;
+//   padding: 1rem;
+//   color: $text-light;
+//   background-color: $text-dark;
+//   border: 0.25rem solid $gray;
+//   @include radius;
+//   text-align: center;
+//   transition-duration: 0.4s;
+//   display: grid;
+//   align-content: center;
+//   cursor: pointer;
+//   width: 60%;
+//   height: auto;
 
-  @media (min-width: 375px) {
-    font-size: 1.5rem;
-  }
+//   @media (min-width: 375px) {
+//     font-size: 1.5rem;
+//   }
 
-  &:hover,
-  &:focus {
-    background-color: $gray;
-    border-color: $color-2;
-  }
+//   &:hover,
+//   &:focus {
+//     background-color: $gray;
+//     border-color: $color-2;
+//   }
 
-  &:disabled {
-    background-color: $bg;
-    color: $text-light-alt;
-    border-color: $text-light-alt;
-  }
-}
+//   &:disabled {
+//     background-color: $bg;
+//     color: $text-light-alt;
+//     border-color: $text-light-alt;
+//   }
+// }

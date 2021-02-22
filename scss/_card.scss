@@ -7,6 +7,7 @@
   @include radius;
   display: grid;
   grid-template-columns: 1fr;
+  line-height: 1.5;
 
   .card-title {
     font-family: $font-2;
@@ -20,18 +21,5 @@
     font-family: $font-3;
     color: $text-dark;
     padding-bottom: 1rem;
-  }
-
-  .number {
-    grid-area: number;
-    font-size: 3rem;
-    font-family: $font-1;
-    color: $text-dark
-  }
-
-  .icon {
-    grid-area: icon;
-    color: $color-3;
-    font-size: 3rem;
   }
 }
