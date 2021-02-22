@@ -23,13 +23,16 @@
     justify-self: center;
     align-self: center;
 
+    @include bp(medium) {
+      justify-self: end;
+    }
+
     .story-pic {
       width: 100%;
       max-width: 300px;
       height: auto;
 
       @include bp(medium) {
-        justify-self: end;
         max-width: 315px;
       }
     }
