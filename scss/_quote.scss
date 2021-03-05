@@ -132,8 +132,14 @@
 
         &:checked + label {
           border-color: $color-4;
-          background-color: $color-3;
+          // background-color: $color-3;
         }
+
+        // &:checked {
+        //   &:hover {
+        //     background-color: $color-5;
+        //   }
+        // }
       }
     
       label {
