@@ -112,43 +112,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  justify-items: center;
   padding: 0 1rem 2rem 1rem;
-}
-
-@media (min-width: 600px) {
-  #story-section {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -webkit-column-gap: 2rem;
-            column-gap: 2rem;
-  }
-}
-
-#story-section picture {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-@media (min-width: 768px) {
-  #story-section picture {
-    -ms-grid-column-align: end;
-        justify-self: end;
-  }
-}
-
-#story-section picture .story-pic {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-}
-
-@media (min-width: 768px) {
-  #story-section picture .story-pic {
-    max-width: 315px;
-  }
 }
 
 #story-section #text-story {
@@ -157,13 +122,6 @@
   max-width: 425px;
   font-size: 1.25rem;
   line-height: 1.5;
-}
-
-@media (min-width: 768px) {
-  #story-section #text-story {
-    -ms-grid-column-align: start;
-        justify-self: start;
-  }
 }
 
 #story-section #story-heading {
@@ -332,6 +290,9 @@
 }
 
 #quote-section #quote-form .recaptcha-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   grid-column: 1 / -1;
   place-self: center;
 }
@@ -389,7 +350,6 @@
 
 #quote-section #quote-form .mod-choices input:checked + label {
   border-color: magenta;
-  background-color: #621aff;
 }
 
 #quote-section #quote-form .mod-choices label {
