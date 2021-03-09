@@ -289,26 +289,9 @@
   font-size: 1rem;
 }
 
-#quote-section #quote-form .recaptcha-container {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+#quote-section #quote-form .g-recaptcha {
   grid-column: 1 / -1;
   place-self: center;
-}
-
-#quote-section #quote-form .g-recaptcha {
-  transform: scale(0.76);
-  -webkit-transform: scale(0.76);
-  transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
-}
-
-@media (min-width: 600px) {
-  #quote-section #quote-form .g-recaptcha {
-    transform: none;
-    -webkit-transform: none;
-  }
 }
 
 #quote-section #quote-form input[type="submit"] {

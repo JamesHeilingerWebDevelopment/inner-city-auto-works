@@ -14,6 +14,9 @@
   <link rel="preload" href="fonts/fontsheet.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="fonts/fontsheet.min.css"></noscript>
 
+  <!-- reCAPTCHA JavaScript -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <!-- ========== FAVICON ========== -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -222,7 +225,7 @@
         <textarea id="message" name="message" class="input-field" placeholder="Anything else we should know???"></textarea>
       </div>
 
-      <div class="recaptcha-container" data-netlify-recaptcha="true"></div>
+      <div class="g-recaptcha" data-sitekey="6LdPq3gaAAAAADn64ElhykUHUYZi324NfFA_Gwjv" data-theme="dark" data-size="compact"></div>
 
       <input type="submit" value="Submit Request" id="submit-btn" class="btn send-btn">
     </form>
