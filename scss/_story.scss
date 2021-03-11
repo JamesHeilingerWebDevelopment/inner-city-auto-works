@@ -7,57 +7,58 @@
   color: $text-light;
   font-family: $font-3;
   display: grid;
-  grid-template-columns: fit-content;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "heading"
+    "text"
+    "cta-btn";
   row-gap: 1rem;
   column-gap: 1rem;
   justify-content: center;
   justify-items: center;
   padding: 0 1rem 2rem 1rem;
 
-  // @include bp(small) {
-  //   grid-template-columns: repeat(2, 1fr);
-  //   column-gap: 2rem;
-  // }
-
   // picture {
 
-  //   justify-self: center;
-  //   align-self: center;
-
-  //   @include bp(medium) {
-  //     justify-self: end;
-  //   }
-
-    // .story-pic {
-    //   width: 100%;
-    //   max-width: 300px;
-    //   height: auto;
-
-    //   @include bp(medium) {
-    //     max-width: 315px;
-    //   }
-    // }
+    
   // }
 
   #text-story {
+    grid-area: text;
     place-self: center;
+
+    width: 100%;
+
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // grid-template-areas:
+    //   "pic1"
+    //   "par1"
+    //   "pic2"
+    //   "par2";
+
     // width: 300px;
     padding: 1rem;
-    max-width: 425px;
+    // max-width: 425px;
     font-size: 1.25rem;
     line-height: 1.5;
 
-    // @include bp(medium) {
-    //   justify-self: start;
-    // }
+    @include bp(small) {
+      // grid-template-columns: repeat(2, 1fr);
+      // grid-template-areas:
+      //   "par1  pic1"
+      //   "pic2  par2";
+      width: 70%;
+    }
   }
 
   #story-heading {
-    grid-column: 1 / -1;
+    grid-area: heading;
     place-self: center;
   }
 
   .cta {
+    grid-area: cta-btn;
     grid-column: 1 / -1;
     place-self: center;
     width: 100%;
@@ -69,4 +70,45 @@
     height: auto;
     width: 100%;
   }
+}
+
+.story-pic-field {
+  // grid-area: pic2;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  justify-self: center;
+  // margin: 0 auto;
+  
+  @include bp(medium) {
+    float: right;
+    width: 50%;
+    margin: 0 0 1rem 1rem;
+  }
+}
+
+.story-pic-haystack {
+  // grid-area: pic1;
+  float: left;
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  justify-self: center;
+  margin-right: 1rem;
+
+  @include bp(large) {
+    width: 25%;
+  }
+
+  @include bp(very-large) {
+    width: 15%;
+  }
+}
+
+.story-p-1 {
+  grid-area: par1;
+}
+
+.story-p-2 {
+  grid-area: par2;
 }
