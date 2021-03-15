@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
+    "anchor"
     "heading"
     "text"
     "cta-btn";
@@ -18,43 +19,28 @@
   justify-items: center;
   padding: 0 1rem 2rem 1rem;
 
-  // picture {
-
-    
-  // }
-
   #text-story {
     grid-area: text;
     place-self: center;
 
     width: 100%;
-
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // grid-template-areas:
-    //   "pic1"
-    //   "par1"
-    //   "pic2"
-    //   "par2";
-
-    // width: 300px;
     padding: 1rem;
-    // max-width: 425px;
     font-size: 1.25rem;
     line-height: 1.5;
 
     @include bp(small) {
-      // grid-template-columns: repeat(2, 1fr);
-      // grid-template-areas:
-      //   "par1  pic1"
-      //   "pic2  par2";
       width: 70%;
     }
+  }
+  
+  #our-story {
+    grid-area: anchor;
   }
 
   #story-heading {
     grid-area: heading;
     place-self: center;
+    top: -$nav-height - 8;
   }
 
   .cta {
@@ -73,12 +59,10 @@
 }
 
 .story-pic-field {
-  // grid-area: pic2;
   width: 100%;
   max-width: 500px;
   height: auto;
   justify-self: center;
-  // margin: 0 auto;
   
   @include bp(medium) {
     float: right;
@@ -88,7 +72,6 @@
 }
 
 .story-pic-haystack {
-  // grid-area: pic1;
   float: left;
   width: 50%;
   max-width: 300px;
